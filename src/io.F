@@ -2589,7 +2589,8 @@ SUBROUTINE READ_INPUT
        ENDIF
 
     IF(IN_Cd)THEN
-        CALL READ_STRING(CD_FILE,FILE_NAME,'Cd_file',ierr) 
+    	! Updated name to be inline with manual
+        CALL READ_STRING(CD_FILE,FILE_NAME,'Friction_File',ierr) 
       IF(ierr==1)THEN
 # if defined (PARALLEL)
       if (myid.eq.0) THEN
